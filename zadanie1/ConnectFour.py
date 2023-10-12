@@ -6,7 +6,7 @@
 # pip install easyAI
 # pip install numpy
 import numpy as np
-from easyAI import TwoPlayerGame
+from easyAI import TwoPlayerGame, Human_Player
 
 
 class ConnectFour(TwoPlayerGame):
@@ -118,7 +118,7 @@ if __name__ == '__main__':
 
     ai = Negamax(5)
     ai2 = Negamax(5)
-    game = ConnectFour([AI_Player(ai), AI_Player(ai2)])
+    game = ConnectFour([AI_Player(ai), Human_Player()])
     game.play()
     if game.win():
         print("Player %d wins." % game.opponent_index)
